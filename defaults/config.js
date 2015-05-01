@@ -38,9 +38,9 @@ module.exports = {
 	// Set the default theme.
 	//
 	// @type     string
-	// @default  "themes/example.css"
+	// @default  "shout"
 	//
-	theme: "themes/example.css",
+	theme: "shout",
 
 	//
 	// Autoload users

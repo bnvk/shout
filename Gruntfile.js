@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-	var libs = "client/js/libs/**/*.js";
+	var libs = "themes/shout/js/libs/**/*.js";
 	grunt.initConfig({
 		watch: {
 			files: libs,
@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 			},
 			js: {
 				files: {
-					"client/js/libs.min.js": libs
+					"themes/shout/js/libs.min.js": libs
 				}
 			}
 		}
@@ -25,9 +25,9 @@ module.exports = function(grunt) {
 				cmd: "node",
 				args: [
 					"node_modules/handlebars/bin/handlebars",
-					"client/views/",
+					"themes/shout/views/",
 					"-e", "tpl",
-					"-f", "client/js/shout.templates.js"
+					"-f", "themes/shout/js/shout.templates.js"
 				]
 			}, function(err) {
 				if (err) console.log(err);
