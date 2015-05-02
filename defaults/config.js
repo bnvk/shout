@@ -35,12 +35,34 @@ module.exports = {
 	bind: undefined,
 
 	//
-	// Set the default theme.
+	// Set the theme and settings
+    // 
+	// @type     object
+	// @default  {}
 	//
-	// @type     string
-	// @default  "shout"
-	//
-	theme: "shout",
+	theme: {
+
+        // Pick package of theme
+        //
+	    // @type     string
+	    // @default  "shout"
+	    //
+        name: "shout",
+
+        // Title of theme
+        //
+	    // @type     string
+	    // @default  "shout"
+	    //
+        title: "Shout",
+
+        // Channels are leavable / joinable
+        //
+	    // @type     boolean
+	    // @default  true
+	    //
+        channels: true
+    },
 
 	//
 	// Autoload users

@@ -17,7 +17,7 @@ module.exports = function(options) {
 
 	var app = express()
 		.use(index)
-		.use(express.static("themes/" + config.theme));
+		.use(express.static("themes/" + config.theme.name));
 
 	app.enable("trust proxy");
 
@@ -72,7 +72,7 @@ module.exports = function(options) {
 
 function index(req, res, next) {
 	if (req.url.split("?")[0] != "/") return next();
-	return fs.readFile("themes/" + config.theme + "/index.html", "utf-8", function(err, file) {
+	return fs.readFile("themes/" + config.theme.name + "/index.html", "utf-8", function(err, file) {
 		var data = _.merge(
 			require("../package.json"),
 			config
